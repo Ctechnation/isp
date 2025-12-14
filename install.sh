@@ -18,7 +18,7 @@ mysql <<EOF
 CREATE DATABASE radius;
 CREATE DATABASE isp_core;
 CREATE USER 'gatescore'@'localhost' IDENTIFIED BY '1Am!w2k@!';
-GRANT ALL PRIVILEGES ON . TO 'gatescore'@'localhost';
+GRANT ALL PRIVILEGES ON . TO 'isp'@'localhost';
 FLUSH PRIVILEGES;
 EOF
 
@@ -40,6 +40,5 @@ cd ../../whatsapp && npm install && node server.js &
 
 wg-quick up vpn/wireguard/wg0.conf
 systemctl enable wg-quick@wg0
-
 
 echo "✅ INSTALL COMPLETE"
