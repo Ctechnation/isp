@@ -1,4 +1,4 @@
-gatescore#!/bin/bash
+#!/bin/bash
 set -e
 
 echo "🚀 Installing Gates Networks ISP Platform"
@@ -40,5 +40,6 @@ cd ../../whatsapp && npm install && node server.js &
 
 wg-quick up vpn/wireguard/wg0.conf
 systemctl enable wg-quick@wg0
+
 
 echo "✅ INSTALL COMPLETE"
